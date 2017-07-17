@@ -20,35 +20,35 @@ public class KitchenTest {
 
     @Test
     public void canGetSmallMeal(){
-        assertEquals(1, kitchen.getSmallMeal());
+        assertEquals(1, kitchen.getSmallMealValue());
     }
 
     @Test
     public void canGetMedMeal(){
-        assertEquals(3, kitchen.getMedMeal());
+        assertEquals(3, kitchen.getMedMealValue());
     }
 
     @Test
     public void canGetLargeMeal(){
-        assertEquals(5, kitchen.getLargeMeal());
+        assertEquals(5, kitchen.getLargeMealValue());
     }
 
     @Test
     public void canSetSmallMealValue(){
         kitchen.setSmallMealValue(2);
-        assertEquals(2, kitchen.getSmallMeal());
+        assertEquals(2, kitchen.getSmallMealValue());
     }
 
     @Test
     public void canSetMedMealValue(){
         kitchen.setMedMealValue(4);
-        assertEquals(4, kitchen.getMedMeal());
+        assertEquals(4, kitchen.getMedMealValue());
     }
 
     @Test
     public void canSetLargeMealValue(){
         kitchen.setLargeMealValue(6);
-        assertEquals(6, kitchen.getLargeMeal());
+        assertEquals(6, kitchen.getLargeMealValue());
     }
 
 

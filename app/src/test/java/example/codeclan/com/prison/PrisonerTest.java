@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -16,53 +17,65 @@ public class PrisonerTest {
 
     @Before
     public void before(){
-        prisoner = new Prisoner(13, "David", 5, true);
+        prisoner = new Prisoner(13, "David", 5, 2, true);
     }
 
     @Test
     public void canGetId(){
-        assertEquals(13, prisoner.getId());
+        assertEquals(13, Prisoner.getId());
     }
 
     @Test
     public void canGetName(){
-        assertEquals("David", prisoner.getName());
-
+        assertEquals("David", Prisoner.getName());
     }
 
     @Test
     public void canGetStomachCapacity(){
-        assertEquals(5, prisoner.getStomachCapacity());
+        assertEquals(5, Prisoner.getStomachCapacity());
+    }
+
+    @Test
+    public void canGetHungerLevel(){
+        assertEquals(2, Prisoner.getHungerLevel());
     }
 
     @Test
     public void canGetViolent(){
-        assertEquals(true, prisoner.getViolent());
+        assertEquals(true, Prisoner.getViolent());
     }
 
     @Test
     public void canSetId(){
         prisoner.setId(12);
-        assertEquals(12, prisoner.getId());
+        assertEquals(12, Prisoner.getId());
     }
 
     @Test
     public void canSetName(){
         prisoner.setName("Chris");
-        assertEquals("Chris", prisoner.getName());
+        assertEquals("Chris", Prisoner.getName());
     }
 
     @Test
     public void canSetStomachCapacity(){
         prisoner.setStomachCapacity(6);
-        assertEquals(6, prisoner.getStomachCapacity());
+        assertEquals(6, Prisoner.getStomachCapacity());
+    }
+
+    @Test
+    public void canSetHungerLevel(){
+        prisoner.setHungerLevel(2);
+        assertEquals(2, Prisoner.getHungerLevel());
     }
 
     @Test
     public void canSetViolent(){
         prisoner.setViolent(false);
-        assertEquals(false, prisoner.getViolent());
+        assertEquals(false, Prisoner.getViolent());
     }
+
+
 
 
 

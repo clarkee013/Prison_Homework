@@ -16,15 +16,15 @@ public class Kitchen {
         this.largeMeal = largeMeal;
     }
 
-    public int getSmallMeal() {
+    public int getSmallMealValue() {
         return smallMeal;
     }
 
-    public int getMedMeal() {
+    public int getMedMealValue() {
         return medMeal;
     }
 
-    public int getLargeMeal() {
+    public int getLargeMealValue() {
         return largeMeal;
     }
 
@@ -39,6 +39,8 @@ public class Kitchen {
     public void setLargeMealValue(int largeMeal) {
         this.largeMeal = largeMeal;
     }
+
+
 }
 
 
