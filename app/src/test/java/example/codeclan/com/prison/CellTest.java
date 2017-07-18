@@ -17,6 +17,7 @@ public class CellTest {
     @Before
     public void before(){
         cell = new Cell(1, 4);
+        prisoner = new Prisoner(13, "David", true);
     }
 
     @Test
@@ -58,10 +59,19 @@ public class CellTest {
         cell.emptyCell();
         assertEquals(0, cell.getNumberOfPrisoners());
     }
+
+    @Test
+    public void canCheckForVoilentPrisoners(){
+        cell.addPrisoner(prisoner);
+        assertEquals(true, cell.checkForViolentPrisoners());
+    }
+
+
+
 // TODO add in capacity & violent prisoner conditions to the add prisoner to cell method
-    // if prisoners if smaller than capacity, add prisoner, if not...? null?
-    // then add in the violent condition.
-    // also need to check if prisoner is violent - at add level of cell level - or both?
+// TODO if prisoners if smaller than capacity, add prisoner, if not...? null?
+// TODO then add in the violent condition.
+// TODO also need to check if prisoner is violent - at add level of cell level - or both?
 
 
 

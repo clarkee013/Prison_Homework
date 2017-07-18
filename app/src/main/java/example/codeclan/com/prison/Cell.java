@@ -48,6 +48,20 @@ public class Cell {
         prisoners.clear();
     }
 
+    public boolean checkForViolentPrisoners() {
+        for (Prisoner prisoner : prisoners) {
+            if (prisoner.getViolent()){
+                return true;
+        }
+    }
+        return false;
+
+    }
+
+// TODO if number of prisoners is less than capacity add prisoner
+// TODO if number of prisoners is less than capacity and prisoner is not violent
+// TODO get the checkForViolentPrisoners method checked - not sure if the true is false and false is true...
+// TODO ... situation is happening like i had with the TO DO list
 
 
 }
