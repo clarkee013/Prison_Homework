@@ -1,5 +1,7 @@
 package example.codeclan.com.prison;
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 17/07/2017.
  */
@@ -8,16 +10,14 @@ public class Prisoner {
 
     private static int id;
     private static String name;
-    private static int stomachCapacity;
-    private static int hungerLevel;
+    private ArrayList<Food> stomach;
     private static boolean violent;
-    Kitchen kitchen;
 
-    public Prisoner(int id, String name, int stomachCapacity, int hungerLevel, boolean violent){
+
+    public Prisoner(int id, String name, boolean violent){
         this.id = id;
         this.name = name;
-        this.stomachCapacity = stomachCapacity;
-        this.hungerLevel = hungerLevel;
+        this.stomach = new ArrayList<Food>();
         this.violent = violent;
 
     }
@@ -28,14 +28,6 @@ public class Prisoner {
 
     public static int getId() {
         return id;
-    }
-
-    public static int getStomachCapacity() {
-        return stomachCapacity;
-    }
-
-    public static int getHungerLevel(){
-        return hungerLevel;
     }
 
     public static boolean getViolent() {
@@ -50,17 +42,31 @@ public class Prisoner {
         this.id = id;
     }
 
-    public void setStomachCapacity(int stomachCapacity) {
-        this.stomachCapacity = stomachCapacity;
-    }
-
-    public void setHungerLevel(int hungerLevel) {
-        this.hungerLevel = hungerLevel;
-    }
-
     public void setViolent(boolean violent) {
         this.violent = violent;
     }
 
+    public int getStomachSize() {
+        return stomach.size();
+    }
 
+    public void eatFood(Food food) {
+        stomach.add(food);
+    }
+
+    public void haveKip() {
+        stomach.clear();
+    }
+
+
+    public int getTotalNutritionalValue() {
+        int total = 0;
+        for (Food food : stomach){
+            total += food.getNutritionalValue();
+        }
+        return total;
+    }
 }
+
+
+
