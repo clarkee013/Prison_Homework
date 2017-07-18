@@ -13,7 +13,30 @@ import static org.junit.Assert.assertEquals;
 
 public class PrisonTest {
 
+    Prison prison;
     Cell cell;
 
+    @Before
+    public void before(){
+        prison = new Prison();
+    }
+
+
+    @Test
+    public void canGetPrisonSize(){
+        assertEquals(0, prison.getPrisonSize());
+    }
+
+    @Test
+    public void canAddCellToPrison(){
+        prison.addCellToPrison(cell);
+        assertEquals(1, prison.getPrisonSize());
+    }
+
+    @Test
+    public void canClearCellsFromPrison(){
+        prison.addCellToPrison(cell);
+        assertEquals(1, prison.getPrisonSize());
+    }
 
 }

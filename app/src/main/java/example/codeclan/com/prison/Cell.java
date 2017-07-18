@@ -19,6 +19,7 @@ public class Cell {
         this.prisoners = new ArrayList<Prisoner>();
     }
 
+
     public static int getCellId() {
         return id;
     }

@@ -47,6 +47,12 @@ public class CellTest {
     }
 
     @Test
+    public void canAddPrisoner(){
+        cell.addPrisoner(prisoner);
+        assertEquals(1, cell.getNumberOfPrisoners());
+    }
+
+    @Test
     public void canClearCell(){
         cell.addPrisoner(prisoner);
         cell.emptyCell();
