@@ -52,6 +52,12 @@ public class CellTest {
         cell.emptyCell();
         assertEquals(0, cell.getNumberOfPrisoners());
     }
+// TODO add in capacity & violent prisoner conditions to the add prisoner to cell method
+    // if prisoners if smaller than capacity, add prisoner, if not...? null?
+    // then add in the violent condition.
+    // also need to check if prisoner is violent - at add level of cell level - or both?
+
+
 
 
 }
