@@ -10,12 +10,13 @@ public class Cell {
 
     private static int id;
     private static int capacity;
-    private ArrayList<Prisoner> cell;
+    private ArrayList<Prisoner> prisoners;
+
 
     public Cell(int id, int capacity){
         this.id = id;
         this.capacity = capacity;
-        this.cell = new ArrayList<Prisoner>();
+        this.prisoners = new ArrayList<Prisoner>();
     }
 
     public static int getCellId() {
@@ -32,6 +33,18 @@ public class Cell {
 
     public void setCellCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public int getNumberOfPrisoners(){
+        return prisoners.size();
+    }
+
+    public void addPrisoner(Prisoner prisoner) {
+        prisoners.add(prisoner);
+    }
+
+    public void emptyCell() {
+        prisoners.clear();
     }
 
 

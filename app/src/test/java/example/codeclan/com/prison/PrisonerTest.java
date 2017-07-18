@@ -3,8 +3,6 @@ package example.codeclan.com.prison;
 import org.junit.Before;
 import org.junit.Test;
 
-
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -66,6 +64,13 @@ public class PrisonerTest {
     }
 
     @Test
+    public void canHaveKip(){
+        prisoner.eatFood(steakPie);
+        prisoner.haveKip();
+        assertEquals(0, prisoner.getStomachSize());
+    }
+
+    @Test
     public void canEatSteakPie(){
         prisoner.haveKip();
         prisoner.eatFood(steakPie);
@@ -86,12 +91,6 @@ public class PrisonerTest {
         assertEquals(1, prisoner.getStomachSize());
     }
 
-    @Test
-    public void canHaveKip(){
-        prisoner.eatFood(steakPie);
-        prisoner.haveKip();
-        assertEquals(0, prisoner.getStomachSize());
-    }
 
     @Test
     public void canGetNutritionalValue_steakPie() {

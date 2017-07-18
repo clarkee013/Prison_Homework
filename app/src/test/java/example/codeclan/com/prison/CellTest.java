@@ -12,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class CellTest {
 
     Cell cell;
+    Prisoner prisoner;
 
     @Before
     public void before(){
@@ -40,9 +41,17 @@ public class CellTest {
         assertEquals(2, cell.getCellCapacity());
     }
 
+    @Test
+    public void canGetNumberOfPrisoners(){
+        assertEquals(0, cell.getNumberOfPrisoners());
+    }
 
+    @Test
+    public void canClearCell(){
+        cell.addPrisoner(prisoner);
+        cell.emptyCell();
+        assertEquals(0, cell.getNumberOfPrisoners());
+    }
 
 
 }
-
-
