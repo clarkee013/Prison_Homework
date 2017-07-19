@@ -6,7 +6,7 @@ package example.codeclan.com.prison;
 
 public interface Food {
 
-    public int getNutritionalValue();
+    int getNutritionalValue();
 }
 
 

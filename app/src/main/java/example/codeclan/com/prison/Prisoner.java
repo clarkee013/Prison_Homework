@@ -6,36 +6,27 @@ import java.util.ArrayList;
  * Created by user on 17/07/2017.
  */
 
-public class Prisoner {
+public class Prisoner extends Human {
 
-    private static int id;
-    private static String name;
+    private int id;
     private ArrayList<Food> stomach;
-    private static boolean violent;
+    private boolean violent;
 
 
     public Prisoner(int id, String name, boolean violent){
+        super(name);
         this.id = id;
-        this.name = name;
         this.stomach = new ArrayList<Food>();
         this.violent = violent;
-
     }
 
-    public static String getName() {
-        return name;
-    }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
-    public static boolean getViolent() {
+    public boolean getViolent() {
         return violent;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setId(int id) {
@@ -66,6 +57,8 @@ public class Prisoner {
         }
         return total;
     }
+
+
 }
 
 

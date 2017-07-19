@@ -13,11 +13,13 @@ public class CellTest {
 
     Cell cell;
     Prisoner prisoner;
+    Prisoner prisoner2;
 
     @Before
     public void before(){
         cell = new Cell(1, 4);
         prisoner = new Prisoner(13, "David", true);
+        prisoner2 = new Prisoner(20, "Steve", false);
     }
 
     @Test
@@ -77,7 +79,14 @@ public class CellTest {
     public void canCheckViolentPrisonerToAddPrisoner(){
         cell.emptyCell();
         cell.addPrisoner(prisoner);
-        assertEquals(false, cell.violentPrisonerCheckToAddPrisoner(prisoner));
+        assertEquals(false, cell.violentPrisonerCheckToAddPrisoner());
+    }
+
+    @Test
+    public void canAddPrisonerWithCapacityAndViolentCheck(){
+        cell.emptyCell();
+        cell.addPrisoner(prisoner);
+        assertEquals(true, cell.prisonerWithCapacityAndViolentCheck());
     }
 
 

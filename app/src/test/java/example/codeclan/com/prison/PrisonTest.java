@@ -15,10 +15,12 @@ public class PrisonTest {
 
     Prison prison;
     Cell cell;
+    Visitor visitor;
 
     @Before
     public void before(){
         prison = new Prison();
+        visitor = new Visitor(1313, "John");
     }
 
 
@@ -38,5 +40,6 @@ public class PrisonTest {
         prison.addCellToPrison(cell);
         assertEquals(1, prison.getPrisonSize());
     }
+
 
 }

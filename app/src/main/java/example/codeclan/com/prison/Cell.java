@@ -2,14 +2,17 @@ package example.codeclan.com.prison;
 
 import java.util.ArrayList;
 
+
 /**
  * Created by user on 17/07/2017.
  */
 
 public class Cell {
 
-    private static int id;
-    private static int capacity;
+    Prisoner prisoner;
+
+    private int id;
+    private int capacity;
     private ArrayList<Prisoner> prisoners;
 
 
@@ -20,11 +23,11 @@ public class Cell {
     }
 
 
-    public static int getCellId() {
+    public int getCellId() {
         return id;
     }
 
-    public static int getCellCapacity() {
+    public int getCellCapacity() {
         return capacity;
     }
 
@@ -49,14 +52,14 @@ public class Cell {
     }
 
     public boolean checkForViolentPrisoners() {
-        for (Prisoner prisoner : prisoners) {
-            if (prisoner.getViolent()){
-                return true;
-        }
+         for (Prisoner prisoner : prisoners) {
+             if (prisoner.getViolent()) {
+                 return true;
+             }
+         }
+         return false;
     }
-        return false;
 
-    }
 
     public boolean capacityCheckToAddPrisoner() {
         if (getNumberOfPrisoners() <= capacity){
@@ -65,19 +68,19 @@ public class Cell {
         return false;
     }
 
-    public boolean violentPrisonerCheckToAddPrisoner(Prisoner prisoner) {
+    public boolean violentPrisonerCheckToAddPrisoner() {
         if (!checkForViolentPrisoners() && prisoner.getViolent()){
             return true;
         }
         return false;
     }
 
-
-// TODO if number of prisoners is less than capacity add prisoner
-// TODO if number of prisoners is less than capacity and prisoner is not violent
-// TODO get the checkForViolentPrisoners method checked - not sure if the true is false and false is true...
-// TODO ... situation is happening like i had with the TO DO list
-
+    public boolean prisonerWithCapacityAndViolentCheck() {
+        if (capacityCheckToAddPrisoner() && !violentPrisonerCheckToAddPrisoner()) {
+            return true;
+        }
+        return false;
+    }
 
 }
 

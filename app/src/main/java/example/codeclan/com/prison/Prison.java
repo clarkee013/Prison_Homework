@@ -11,8 +11,10 @@ public class Prison {
     Cell cell;
     private ArrayList<Cell> cells;
 
+
     public Prison(){
         this.cells = new ArrayList<Cell>();
+
     }
 
     public int getPrisonSize() {
@@ -22,8 +24,6 @@ public class Prison {
     public void addCellToPrison(Cell cell) {
         cells.add(cell);
     }
-
-
 
 }
 

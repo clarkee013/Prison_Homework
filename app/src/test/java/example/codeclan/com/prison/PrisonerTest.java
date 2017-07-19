@@ -26,36 +26,35 @@ public class PrisonerTest {
 
     @Test
     public void canGetId(){
-        assertEquals(13, Prisoner.getId());
+        assertEquals(13, prisoner.getId());
     }
 
     @Test
     public void canGetName(){
-        assertEquals("David", Prisoner.getName());
+        assertEquals("David", prisoner.getName());
     }
 
     @Test
     public void canGetViolent(){
-        assertEquals(true, Prisoner.getViolent());
+        assertEquals(true, prisoner.getViolent());
     }
 
     @Test
     public void canSetId(){
         prisoner.setId(12);
-        assertEquals(12, Prisoner.getId());
+        assertEquals(12, prisoner.getId());
     }
 
     @Test
     public void canSetName(){
         prisoner.setName("Chris");
-        assertEquals("Chris", Prisoner.getName());
+        assertEquals("Chris", prisoner.getName());
     }
-
 
     @Test
     public void canSetViolent(){
         prisoner.setViolent(false);
-        assertEquals(false, Prisoner.getViolent());
+        assertEquals(false, prisoner.getViolent());
     }
 
     @Test
