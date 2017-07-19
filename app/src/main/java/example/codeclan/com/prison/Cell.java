@@ -58,6 +58,21 @@ public class Cell {
 
     }
 
+    public boolean capacityCheckToAddPrisoner() {
+        if (getNumberOfPrisoners() <= capacity){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean violentPrisonerCheckToAddPrisoner(Prisoner prisoner) {
+        if (!checkForViolentPrisoners() && prisoner.getViolent()){
+            return true;
+        }
+        return false;
+    }
+
+
 // TODO if number of prisoners is less than capacity add prisoner
 // TODO if number of prisoners is less than capacity and prisoner is not violent
 // TODO get the checkForViolentPrisoners method checked - not sure if the true is false and false is true...

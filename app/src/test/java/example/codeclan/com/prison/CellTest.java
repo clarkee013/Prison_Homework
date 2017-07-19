@@ -61,10 +61,29 @@ public class CellTest {
     }
 
     @Test
-    public void canCheckForVoilentPrisoners(){
+    public void canCheckForViolentPrisoners(){
         cell.addPrisoner(prisoner);
         assertEquals(true, cell.checkForViolentPrisoners());
     }
+
+    @Test
+    public void canCapacityCheckToAddPrisoner(){
+        cell.emptyCell();
+        cell.addPrisoner(prisoner);
+        assertEquals(true, cell.capacityCheckToAddPrisoner());
+    }
+
+    @Test
+    public void canCheckViolentPrisonerToAddPrisoner(){
+        cell.emptyCell();
+        cell.addPrisoner(prisoner);
+        assertEquals(false, cell.violentPrisonerCheckToAddPrisoner(prisoner));
+    }
+
+
+
+
+
 
 
 
