@@ -12,14 +12,12 @@ public class Prisoner extends Human {
     private ArrayList<Food> stomach;
     private boolean violent;
 
-
     public Prisoner(int id, String name, boolean violent){
         super(name);
         this.id = id;
         this.stomach = new ArrayList<Food>();
         this.violent = violent;
     }
-
 
     public int getId() {
         return id;

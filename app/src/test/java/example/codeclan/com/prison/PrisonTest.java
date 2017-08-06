@@ -3,8 +3,6 @@ package example.codeclan.com.prison;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -15,14 +13,12 @@ public class PrisonTest {
 
     Prison prison;
     Cell cell;
-    Visitor visitor;
+
 
     @Before
     public void before(){
         prison = new Prison();
-        visitor = new Visitor(1313, "John");
     }
-
 
     @Test
     public void canGetPrisonSize(){
