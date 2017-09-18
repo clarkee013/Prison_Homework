@@ -21,4 +21,10 @@ public class VisitorTest {
         assertEquals("Fee", visitor.getName());
     }
 
+    @Test
+    public void canSetName(){
+        visitor.setName("Chris");
+        assertEquals("Chris", visitor.getName());
+    }
+
 }
